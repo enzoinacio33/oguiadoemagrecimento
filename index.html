@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Guia do Emagrecimento</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0fdf4;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      color: #003366;
+      font-size: 2.5em;
+    }
+    h2 {
+      color: #006400;
+    }
+    .cta-button {
+      background-color: #ff7f00;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      text-decoration: none;
+      display: inline-block;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .highlight {
+      background-color: #fffacd;
+      padding: 10px;
+      border-left: 5px solid #ff7f00;
+      margin: 20px 0;
+    }
+    .testimonials {
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+    .testimonial {
+      margin-bottom: 15px;
+    }
+    .testimonial strong {
+      color: #003366;
+    }
+    .price {
+      font-size: 2em;
+      color: #006400;
+      margin: 20px 0;
+    }
+    .timer {
+      font-size: 1.2em;
+      color: #d9534f;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #888;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+      .cta-button {
+        font-size: 1em;
+        padding: 12px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Perca Peso Rápido Sem Sofrer!</h1>
+    <h2>Descubra o Guia Que Já Mudou a Vida de Milhares</h2>
+    <p>Você está cansado de dietas complicadas que nunca funcionam? Chegou a hora de mudar sua vida com dicas simples e receitas rápidas que realmente funcionam!</p>
+    <div class="highlight">
+      <p><strong>O Guia do Emagrecimento:</strong> 10 receitas saudáveis, práticas e deliciosas + dicas simples para perder peso de forma rápida e segura!</p>
+    </div>
+    <p class="price">Apenas R$19,90</p>
+    <p class="timer">⚠️ Oferta válida por tempo limitado! Termina em: <span id="countdown"></span></p>
+    <a class="cta-button" href="https://seulinkdepagamento.com">QUERO EMAGRECER AGORA!</a>
+
+    <div class="testimonials">
+      <h2>O que estão dizendo:</h2>
+      <div class="testimonial">
+        <p>"Esse ebook é maravilhoso! As receitas são fáceis e deliciosas. Perdi 5kg em 2 semanas!"<br><strong>- Ana Souza, 34 anos</strong></p>
+      </div>
+      <div class="testimonial">
+        <p>"Recomendo demais! É tudo muito prático, perfeito pra quem não tem tempo."<br><strong>- Juliana Lima, 29 anos</strong></p>
+      </div>
+      <div class="testimonial">
+        <p>"Vale cada centavo. Já indiquei pra todas as minhas amigas!"<br><strong>- Carla Mendes, 42 anos</strong></p>
+      </div>
+    </div>
+
+    <a class="cta-button" href="https://seulinkdepagamento.com">COMPRAR AGORA POR R$19,90</a>
+
+    <p><em>Garantia de satisfação: ou seu dinheiro de volta sem perguntas!</em></p>
+  </div>
+
+  <footer>
+    © 2025 Guia do Emagrecimento. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    const countdownElement = document.getElementById('countdown');
+    const endTime = new Date().getTime() + 15 * 60 * 1000;
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = endTime - now;
+
+      if (distance < 0) {
+        countdownElement.innerHTML = "TEMPO ESGOTADO!";
+        return;
+      }
+
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.innerHTML = `${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
